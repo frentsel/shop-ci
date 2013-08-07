@@ -1,0 +1,18 @@
+AddDefaultCharset utf8
+
+RewriteEngine On
+
+RewriteBase /
+
+# Remove www from url
+RewriteCond %{HTTP_HOST} ^www.(.*)$
+RewriteRule ^(.*)$ http://%1/$1 [L,R=301]
+
+# add slash to url
+RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{REQUEST_URI} !\.
+RewriteRule ^(.*) %{REQUEST_URI}/ [R=301,L]
+
+# Remove index.php from url
+RewriteCond $1 !^(index\.php|public|robots\.txt|css|js|images|img|additions|assets|uploads)
+RewriteRule ^(.*)$ /index.php/$1/ [L]
