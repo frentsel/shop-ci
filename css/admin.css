@@ -53,13 +53,14 @@ body {
 ----------------------------------------------------------------------------------------------------------------------*/
 
 header nav {
-    background-color: cornflowerblue;
+    background-color: dodgerblue;
+    display: inline-table;
 }
 
 header nav li {
     border-right: 1px solid #fff;
-    display: inline-block;
-    padding: 8px 20px;
+    float: left;
+    padding: 5px 20px;
 }
 
 header nav li:hover {
@@ -68,9 +69,6 @@ header nav li:hover {
 
 nav a {
     color: #fff;
-    font-size: 12px;
-    font-weight: bold;
-    line-height: normal;
 }
 
 /* Content
