@@ -1,14 +1,26 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: segoeui;
+    src: url('fonts/segoeui.ttf');
+}
+
+@font-face {
+    font-family: segoeuib;
+    src: url('fonts/segoeuib.ttf');
+}
+
 html, body {
-    height: 100%;
+    min-height: 100%;
 }
 
 body {
-    font-family: arial,tahoma,verdana,georgia;
-    color: #7e7e7e;
+    color: #434e74;
+    font-family: segoeui,arial,tahoma,verdana,georgia;
 }
 
 a {
-    color: lightslategray;
+    color: #434E74;
 }
 
 p {
@@ -21,11 +33,16 @@ hr {
 }
 
 h1, h2, h3, h4, h5 {
-    color: lightslategray;
+    font-family: segoeui,arial,tahoma,verdana,georgia;
+    margin-bottom: 10px;
 }
 
 h2 {
     font-size: 27px;
+}
+
+small {
+    font-size: 12px;
 }
 
 input:focus,
@@ -40,25 +57,28 @@ input {
 
 input,
 textarea {
-    border: 1px solid #eee;
+    border: 1px solid #d5d5d5;
 }
 
 #main {
-    border-left: 1px solid #eee;
-    border-right: 1px solid #eee;
+    background-color: #FFFFFF;
+    border-left: 1px solid #d5d5d5;
+    border-right: 1px solid #d5d5d5;
 }
 
 div.line {
-    border-top: 1px solid #eee;
-    height: 1px;
-    margin: 10px 0;
+    border-top: 1px solid #d5d5d5;
+}
+
+.padding {
+    padding: 20px;
 }
 
 /* Buttons
 ----------------------------------------------------------------------------------------------------------------------*/
 
 .btn {
-    background-color: violet;
+    background-color: #889bd3;
     border: medium none;
     color: #fff;
     cursor: pointer;
@@ -69,11 +89,11 @@ div.line {
 }
 
 .btn:hover {
-    background-color: lightslategray
+    background-color: #889bd3;
 }
 
 .btn-info {
-    background-color: mediumaquamarine;
+    background-color: #1E90FF;
 }
 
 .btn-success {
@@ -81,7 +101,7 @@ div.line {
 }
 
 .btn-remove {
-    background-color: lightpink;
+    background-color: #ae8fb1;
 }
 
 .btn-clear {
@@ -116,6 +136,10 @@ div.line {
 /* Header
 ----------------------------------------------------------------------------------------------------------------------*/
 
+header {
+    padding-top: 10px;
+}
+
 header h1 {
     font-size: 30px;
     margin: 15px 0 0;
@@ -131,25 +155,24 @@ a.various {
 }
 
 nav {
-    text-align: right;
+    border-bottom: 1px solid #D5D5D5;
+    border-top: 1px solid #D5D5D5;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    overflow: hidden;
 }
 
 nav ul li {
-    display: inline-block;
+    border-right: 1px solid #D5D5D5;
+    float: left;
 }
 
 nav a {
-    border-right: 1px solid #ddd;
-    color: lightseagreen;
+    color: #434E74;
+    display: block;
     font-size: 14px;
-    margin-right: 10px;
-    padding-right: 10px;
+    margin: 7px 20px;
     text-decoration: none;
-}
-
-nav li:nth-last-child(1) a {
-    border-right: 0 none;
-    padding-right: 0;
 }
 
 /* Cart + Checkout
@@ -168,19 +191,21 @@ nav li:nth-last-child(1) a {
     margin-top: 2px;
 }
 
-#cart th,
-#checkout th {
-    background-color: lightslategray;
-    border-right: 1px solid #fff;
-    color: #fff;
+#cart th, #checkout th {
+    border-bottom: 1px solid #D5D5D5;
+    border-right: 1px solid #D5D5D5;
     font-size: 14px;
-    padding: 7px 0;
+    padding: 7px 10px;
+}
+
+#cart th:last-child, #checkout th:last-child {
+    border-right: 0 none;
 }
 
 #cart td,
 #checkout td {
-    border-right: 1px solid #eee;
-    border-bottom: 1px solid #eee;
+    border-right: 1px solid #d5d5d5;
+    border-bottom: 1px solid #d5d5d5;
     font-size: 12px;
     padding: 7px 10px;
     vertical-align: middle;
@@ -193,6 +218,8 @@ nav li:nth-last-child(1) a {
 }
 
 .checkout-form {
+    border-left: 1px solid #D5D5D5;
+    border-right: 1px solid #D5D5D5;
     text-align: center;
     width: 100%;
 }
@@ -221,19 +248,28 @@ nav li:nth-last-child(1) a {
     width: 250px;
 }
 
-.contact input[type="text"],
-.contact input[type="email"],
-.contact textarea {
-    margin-bottom: 7px;
-}
-
 .user-data-checkout textarea,
 .contact textarea {
     height: 100px;
 }
 
-#checkout tr:last-child {
-    background-color: mintcream;
+textarea.contact-block {
+    height: 120px;
+    margin-left: 15px;
+    width: 410px;
+}
+
+/* Contact Form
+----------------------------------------------------------------------------------------------------------------------*/
+
+form.contact {
+    margin-bottom: 20px;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+    margin-bottom: 7px;
 }
 
 /* Fancybox
@@ -262,7 +298,7 @@ nav li:nth-last-child(1) a {
 }
 
 #sidebar li {
-    line-height: 25px;
+    line-height: 30px;
 }
 
 #sidebar li a {
@@ -276,21 +312,33 @@ nav li:nth-last-child(1) a {
 /* Products
 ----------------------------------------------------------------------------------------------------------------------*/
 
-.products article {
-    border-bottom: 1px solid #eee;
-    border-left: 1px solid #eee;
-    float: left;
-    height: 200px;
-    padding: 10px;
-    position: relative;
-    width: 212px;
+.products {
+    margin-top: 9px;
 }
 
-.products article:nth-child(3n) {
-    border-right: medium none;
+.products article {
+    border-bottom: 1px solid #D5D5D5;
+    border-right: 1px solid #D5D5D5;
+    float: left;
+    height: 200px;
+    padding: 20px;
+    position: relative;
+    width: 192px;
+}
+
+.products-wrapper {
+    border-left: 1px solid #D5D5D5;
+    border-top: 1px solid #D5D5D5;
+    overflow: hidden;
+}
+
+.block-image {
+    min-height: 150px;
 }
 
 .products img {
+    display: block;
+    margin: 0 auto;
     max-height: 130px;
     max-width: 200px;
 }
@@ -306,15 +354,14 @@ nav li:nth-last-child(1) a {
 }
 
 .info {
-    bottom: 10px;
+    bottom: 20px;
     color: #666;
     font-size: 12px;
-    left: 10px;
+    left: 20px;
     position: absolute;
 }
 
 .info small {
-    color: dodgerblue;
 }
 
 .info-order {
@@ -324,9 +371,13 @@ nav li:nth-last-child(1) a {
 /* Product
 ----------------------------------------------------------------------------------------------------------------------*/
 
+.product {
+    border: 1px solid #D5D5D5;
+}
+
 .product td.description {
-    border-left: 1px solid #eee;
-    padding: 0 10px;
+    border-left: 1px solid #d5d5d5;
+    padding: 20px;
     vertical-align: top !important;
 }
 
@@ -368,27 +419,42 @@ article .p-action {
 /* Posts
 ----------------------------------------------------------------------------------------------------------------------*/
 
+.posts {
+    border: 1px solid #D5D5D5;
+}
+
+.page {
+    margin-top: 10px;
+}
+
 .posts article {
-    border-left: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-    margin-bottom: 20px;
+    border-bottom: 1px solid #D5D5D5;
+    overflow: hidden;
     padding: 0 15px 15px;
 }
 
+article h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
 .posts article:last-child {
-    margin-bottom: 0
+    border-bottom: 0 none;
+    margin-bottom: 0;
 }
 
-.posts article h1 {
-    font-size: 22px;
+.product-title {
+    font-size: 16px;
     margin-bottom: 10px;
+    margin-top: 5px;
 }
 
-.posts article h1 a {
+.product-title a {
     text-decoration: none;
 }
 
-.posts article h1 a:hover {
+.product-title a:hover {
     text-decoration: underline;
 }
 
@@ -410,7 +476,7 @@ article .p-action {
 }
 
 .post-info span {
-    color: dodgerblue;
+    color: #ae8fb1;
 }
 
 /* Pagination
@@ -429,7 +495,7 @@ article .p-action {
 }
 
 #pagination a, #pagination strong {
-    color: dodgerblue;
+    color: #ae8fb1;
 }
 
 #pagination strong {

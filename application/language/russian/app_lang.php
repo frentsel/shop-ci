@@ -21,8 +21,9 @@ $lang['sidebar_title'] = 'Категории';
 
 $lang['button_add_to_cart'] = 'В корзину';
 $lang['button_send_email'] = 'Отправить сообщение !';
-$lang['button_checkout'] = 'Оплата';
+$lang['button_checkout'] = 'Оформить заказ';
 $lang['button_update'] = 'Обновить корзину';
+$lang['button_clear'] = 'Очистить корзину';
 $lang['button_remove'] = 'Удалить';
 
 $lang['order_new_order'] = 'Создание заказа';

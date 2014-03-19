@@ -1,7 +1,5 @@
 <?php if(!empty($key) && $key == 'enable'): ?>
 <br>
-<div class="line"></div>
-<br>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */

@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title><?=$this->title;?></title>
+    <!--
     <description><?=$this->description;?></description>
+    -->
+
     <link media="screen" href="/additions/fancyBox/source/jquery.fancybox.css?v=2.1.4" type="text/css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" media="screen" href="/css/style.css">
     <link type="text/css" rel="stylesheet" media="screen" href="/css/main.css">
 
     <?php if($this->uri->segment(1) == 'product'): ?>
-    <link type="text/css" rel="stylesheet" media="screen" href="/additions/fancyBox/source/helpers/jquery.fancybox-buttons.css">
-    <link type="text/css" rel="stylesheet" media="screen" href="/additions/fancyBox/source/helpers/jquery.fancybox-thumbs.css">
+        <link type="text/css" rel="stylesheet" media="screen" href="/additions/fancyBox/source/helpers/jquery.fancybox-buttons.css">
+        <link type="text/css" rel="stylesheet" media="screen" href="/additions/fancyBox/source/helpers/jquery.fancybox-thumbs.css">
     <?php endif; ?>
 
 </head>
@@ -27,7 +30,7 @@
             <a class="various fancybox.ajax" href="/cart"><img src="/img/cart.png"></a>
         </div>
         <div class="clear">&nbsp;</div>
-        <nav class="grid_9 prefix_3">
+        <nav class="">
             <ul>
                 <li><a href="/"><?=$this->lang->line('header_menu_home');?></a></li>
                 <li><a href="/blog/0/"><?=$this->lang->line('header_menu_blog');?></a></li>
@@ -40,8 +43,6 @@
                 <?php endif;?>
             </ul>
         </nav>
-        <div class="clear">&nbsp;</div>
-        <div class="line"></div>
     </header>
     <div id="content">
         <div class="grid_3">
@@ -52,10 +53,12 @@
         </div>
         <div class="clear">&nbsp;</div>
     </div>
+    <div class="line"></div>
     <footer>
         <div class="grid_12">
-            <div class="line"></div>
-            <p><?=$this->lang->line('site_name');?> 2013 &copy;</p>
+            <div class="padding">
+                <p><?=$this->lang->line('site_name');?> 2013 &copy;</p>
+            </div>
         </div>
         <div class="clear">&nbsp;</div>
     </footer>

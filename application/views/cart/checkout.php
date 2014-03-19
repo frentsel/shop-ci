@@ -34,13 +34,15 @@
     </table>
 
     <br>
-    <h3><?=$this->lang->line('contact_info');?></h3>
-    <div class="line"></div>
+    <h2><?=$this->lang->line('contact_info');?></h2>
     <table class="user-data-checkout">
         <tbody>
         <tr>
             <td>
                 <input type="text" name="name" id="name"  required="required" placeholder="<?=$this->lang->line('contact_name');?> *">
+            </td>
+            <td rowspan="3">
+                <textarea class="contact-block" placeholder="<?=$this->lang->line('contact_message');?>" name="message"></textarea>
             </td>
         </tr>
         <tr>
@@ -53,22 +55,17 @@
                 <input type="email" name="email" id="email" placeholder="<?=$this->lang->line('contact_email');?> *" required="required">
             </td>
         </tr>
-        <tr>
-            <td>
-                <textarea placeholder="<?=$this->lang->line('contact_message');?>" name="message"></textarea>
-            </td>
-        </tr>
         </tbody>
     </table>
+    <br>
     <button type="submit" name="pay" class="btn btn-info">
         <i class="ok"></i>
         <?=$this->lang->line('button_checkout');?>
-    </button>
+    </button> <small><a href="#" class="go_back"><?=$this->lang->line('go_back');?></a></small>
+    <br>
+    <br>
+    <br>
 </form>
-<br>
-<p>
-    <a href="#" class="go_back"><?=$this->lang->line('go_back');?></a>
-</p>
 <?php else: ?>
 <h2><?=$this->lang->line('cart_empty');?></h2>
 <div class="line"></div>

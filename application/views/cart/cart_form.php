@@ -40,6 +40,7 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
+        <br>
         <button type="submit" name="checkout" class="btn btn-info">
             <i class="ok"></i>
             <?=$this->lang->line('button_checkout');?>
