@@ -45,6 +45,7 @@ $lang['currency'] = 'UAH';
 /* Admin Panel
 ----------------------------------------------------------------------------------------------------------------------*/
 
+$lang['admin_site'] = 'Site';
 $lang['admin_orders'] = 'Orders';
 $lang['admin_categories'] = 'Categories';
 $lang['admin_news'] = 'News';
@@ -52,5 +53,6 @@ $lang['admin_blog'] = 'Blog';
 $lang['admin_products'] = 'Products';
 $lang['admin_pages'] = 'Pages';
 $lang['admin_users'] = 'Users';
-
 $lang['admin_product'] = 'Product';
+$lang['admin_logout'] = 'Logout';
+$lang['admin_settings'] = 'Settings';

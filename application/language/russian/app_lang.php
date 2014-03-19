@@ -37,3 +37,18 @@ $lang['contact_info'] = 'Контактная информация';
 
 $lang['go_back'] = 'Вернуться';
 $lang['currency'] = 'RUB';
+
+/* Admin Panel
+----------------------------------------------------------------------------------------------------------------------*/
+
+$lang['admin_site'] = 'Сайт';
+$lang['admin_orders'] = 'Заказы';
+$lang['admin_categories'] = 'Категории';
+$lang['admin_news'] = 'Новости';
+$lang['admin_blog'] = 'Блог';
+$lang['admin_products'] = 'Продукты';
+$lang['admin_pages'] = 'Страницы';
+$lang['admin_users'] = 'Пользователи';
+$lang['admin_product'] = 'Продукт';
+$lang['admin_logout'] = 'Выход';
+$lang['admin_settings'] = 'Настройки';

@@ -60,7 +60,7 @@ header nav {
 header nav li {
     border-right: 1px solid #fff;
     float: left;
-    padding: 5px 20px;
+    padding: 5px 16px;
 }
 
 header nav li:hover {

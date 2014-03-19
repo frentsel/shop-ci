@@ -43,6 +43,9 @@ class Main extends BaseController {
 
         $this->crud->set_relation('user_id','users','user_name');
 
+        // Remove in production version
+        $this->crud->callback_delete('return_false');
+
         $output = $this->crud->render();
 
         $this->_example_output($output);
@@ -51,6 +54,8 @@ class Main extends BaseController {
     function categories()
     {
         $this->crud->set_subject('Category');
+        // Remove in production version
+        $this->crud->callback_delete('return_false');
 
         $output = $this->crud->render();
 
@@ -107,6 +112,9 @@ class Main extends BaseController {
             'category_title'
         );
 
+        // Remove in production version
+        $this->crud->callback_delete('return_false');
+
         $output = $this->crud->render();
         $this->_example_output($output);
     }
@@ -131,6 +139,9 @@ class Main extends BaseController {
         //$this->crud->unset_columns('post_type');
 
         $this->crud->set_relation('user_id','users','user_name');
+
+        // Remove in production version
+        $this->crud->callback_delete('return_false');
 
         $output = $this->crud->render();
         $this->_example_output($output);
@@ -157,6 +168,9 @@ class Main extends BaseController {
 
         $this->crud->set_relation('user_id','users','user_name');
 
+        // Remove in production version
+        $this->crud->callback_delete('return_false');
+
         $output = $this->crud->render();
         $this->_example_output($output);
     }
@@ -182,6 +196,9 @@ class Main extends BaseController {
 
         $this->crud->set_relation('user_id','users','user_name');
 
+        // Remove in production version
+        $this->crud->callback_delete('return_false');
+
         $output = $this->crud->render();
         $this->_example_output($output);
     }
@@ -189,6 +206,9 @@ class Main extends BaseController {
     function users()
     {
         $this->crud->set_subject('User');
+
+        // Remove in production version
+        $this->crud->callback_delete('return_false');
 
         $output = $this->crud->render();
         $this->_example_output($output);
@@ -202,7 +222,15 @@ class Main extends BaseController {
 
         $this->crud->field_type('title','readonly');
 
+        // Remove in production version
+        $this->crud->callback_delete('return_false');
+
         $output = $this->crud->render();
         $this->_example_output($output);
+    }
+
+    public function return_false()
+    {
+        return false;
     }
 }
